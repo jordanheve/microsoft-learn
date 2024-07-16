@@ -1,0 +1,1 @@
+These projects are built implementing knowledge from microsoft learn courses.
