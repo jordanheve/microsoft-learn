@@ -42,10 +42,10 @@ do
     if(validNumber)
     {
         if(numericValue >= 5 && numericValue <= 10 ){
-            Console.WriteLine("Success");
+            Console.WriteLine($"Your input value {numericValue} has been accepted\n");	
             validateEntry = true;
         }else{
-            Console.WriteLine("Please enter a number between 5 and 10");
+            Console.WriteLine($"Please enter a number between 5 and 10, {numericValue} is not valid");
         }
     }else 
     {
@@ -53,3 +53,43 @@ do
     }
 
 }while(!validateEntry);
+
+// Code project 2 - write code that validates string input
+// Your solution must include either a do-while or while iteration.
+
+// Before the iteration block: your solution must use a Console.WriteLine() statement to prompt the user for one of three role names: Administrator, Manager, or User.
+
+// Inside the iteration block:
+
+// Your solution must use a Console.ReadLine() statement to obtain input from the user.
+// Your solution must ensure that the value entered matches one of the three role options.
+// Your solution should use the Trim() method on the input value to ignore leading and trailing space characters.
+// Your solution should use the ToLower() method on the input value to ignore case.
+// If the value entered isn't a match for one of the role options, your code must use a Console.WriteLine() statement to prompt the user for a valid entry.
+// Below (after) the iteration code block: Your solution must use a Console.WriteLine() statement to inform the user that their input value has been accepted.
+ 
+string? entryRole;
+bool validRole = false;
+
+do
+{
+    Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
+
+    entryRole = Console.ReadLine();
+
+    string role = entryRole?.Trim().ToLower() ?? string.Empty;
+
+    if(role == "manager" ||  role == "administrator" || role == "user")
+    {
+        Console.WriteLine($"Your input value ({entryRole}) has been accepted");
+        validRole = true;
+    }else {
+         Console.WriteLine($"The role name that you entered \"{entryRole}\" is not valid. Enter your role name (Administrator, Manager, or User)" );
+
+    }
+    
+}while(!validRole);
+
+
+
+
