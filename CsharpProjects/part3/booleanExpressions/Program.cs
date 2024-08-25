@@ -26,7 +26,7 @@ if (permission.Contains("Admin")){
 }
 
 // Code challenge: update problematic code in the code editor
-int[] numbers = [4, 8, 15, 16, 23, 42];
+int[] numbers = {4, 8, 15, 16, 23, 42};
 bool found = false;
 int total = 0;
 foreach (int number in numbers)
